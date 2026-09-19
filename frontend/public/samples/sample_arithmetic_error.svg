@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1050" width="800" height="1050">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="0" y="0" width="800" height="12" fill="#ef4444"/>
+  
+  <text x="50" y="70" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#0f172a">INVOICE</text>
+  <text x="50" y="95" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#64748b">FastShip Industrial Supplies</text>
+  <text x="50" y="115" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#64748b">Tax ID: US-EIN-77-2291044</text>
+  <text x="50" y="132" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#64748b">88 Logistics Parkway, Chicago, IL</text>
+
+  <rect x="520" y="50" width="230" height="95" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="535" y="75" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Invoice #:</text>
+  <text x="630" y="75" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0f172a">FS-89022</text>
+  <text x="535" y="100" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Date:</text>
+  <text x="630" y="100" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#0f172a">2026-09-02</text>
+  <text x="535" y="125" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Payment Terms:</text>
+  <text x="630" y="125" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#0f172a">Net 30</text>
+
+  <text x="50" y="190" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#475569">BILLED TO:</text>
+  <text x="50" y="210" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#0f172a">Acme Global Enterprises</text>
+  <text x="50" y="228" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#64748b">Accounts Payable Dept, 500 Market St, SF, CA</text>
+
+  <rect x="50" y="270" width="700" height="38" fill="#0f172a" rx="4"/>
+  <text x="70" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">DESCRIPTION</text>
+  <text x="450" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">QTY</text>
+  <text x="540" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">UNIT PRICE</text>
+  <text x="660" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">TOTAL</text>
+
+  <rect x="50" y="315" width="700" height="48" fill="#f8fafc"/>
+  <text x="70" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">Heavy Duty Corrugated Box (Pack of 50)</text>
+  <text x="460" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">30.00</text>
+  <text x="540" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">$25.00</text>
+  <text x="665" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">$750.00</text>
+  <line x1="50" y1="363" x2="750" y2="363" stroke="#e2e8f0"/>
+
+  <rect x="450" y="420" width="300" height="150" rx="6" fill="#fef2f2" stroke="#f87171"/>
+  <text x="470" y="450" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">Subtotal:</text>
+  <text x="680" y="450" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#0f172a">$750.00</text>
+  
+  <text x="470" y="480" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">Sales Tax (8%):</text>
+  <text x="690" y="480" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#0f172a">$60.00</text>
+  
+  <line x1="470" y1="500" x2="730" y2="500" stroke="#fca5a5"/>
+  <!-- Calculation mismatch error in stated total ($910 vs 810) -->
+  <text x="470" y="535" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#991b1b">Stated Total (Typo):</text>
+  <text x="665" y="535" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">$910.00</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1050" width="800" height="1050">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="0" y="0" width="800" height="12" fill="#4f46e5"/>
+  
+  <!-- Header -->
+  <text x="50" y="70" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#0f172a">INVOICE</text>
+  <text x="50" y="95" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#64748b">NexaCloud Software Inc.</text>
+  <text x="50" y="115" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#64748b">Tax ID: US-EIN-12-8874109</text>
+  <text x="50" y="132" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#64748b">100 Tech Enterprise Blvd, Suite 400, Austin, TX</text>
+
+  <!-- Meta Table -->
+  <rect x="520" y="50" width="230" height="95" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="535" y="75" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#334155">Invoice #:</text>
+  <text x="630" y="75" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#0f172a">NEXA-2026-891</text>
+  <text x="535" y="100" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#334155">Date:</text>
+  <text x="630" y="100" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#0f172a">2026-09-01</text>
+  <text x="535" y="125" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#334155">Payment Terms:</text>
+  <text x="630" y="125" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#0f172a">Net 15</text>
+
+  <!-- Bill To -->
+  <text x="50" y="190" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#475569">BILLED TO:</text>
+  <text x="50" y="210" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#0f172a">Acme Global Enterprises</text>
+  <text x="50" y="228" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#64748b">Accounts Payable Dept, 500 Market St, SF, CA</text>
+
+  <!-- Table Header -->
+  <rect x="50" y="270" width="700" height="38" fill="#0f172a" rx="4"/>
+  <text x="70" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">DESCRIPTION</text>
+  <text x="450" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">QTY</text>
+  <text x="540" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">UNIT PRICE</text>
+  <text x="660" y="294" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">TOTAL</text>
+
+  <!-- Row 1 -->
+  <rect x="50" y="315" width="700" height="48" fill="#f8fafc"/>
+  <text x="70" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">Enterprise Cloud Compute Tier 2 (Monthly)</text>
+  <text x="460" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">1.00</text>
+  <text x="540" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">$1,200.00</text>
+  <text x="655" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">$1,200.00</text>
+  <line x1="50" y1="363" x2="750" y2="363" stroke="#e2e8f0"/>
+
+  <!-- Row 2 -->
+  <rect x="50" y="365" width="700" height="48" fill="#ffffff"/>
+  <text x="70" y="394" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">Dedicated SSL Certificate &amp; DNS Guard</text>
+  <text x="460" y="394" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">1.00</text>
+  <text x="540" y="394" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1e293b">$250.00</text>
+  <text x="665" y="394" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">$250.00</text>
+  <line x1="50" y1="413" x2="750" y2="413" stroke="#e2e8f0"/>
+
+  <!-- Summary Box -->
+  <rect x="450" y="440" width="300" height="140" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="470" y="470" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">Subtotal:</text>
+  <text x="670" y="470" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#0f172a">$1,450.00</text>
+  
+  <text x="470" y="500" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">Estimated Tax (8%):</text>
+  <text x="680" y="500" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#0f172a">$116.00</text>
+  
+  <line x1="470" y1="520" x2="730" y2="520" stroke="#cbd5e1"/>
+  <text x="470" y="550" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Total Amount Due:</text>
+  <text x="660" y="550" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5">$1,566.00</text>
+
+  <!-- Footer -->
+  <text x="50" y="980" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8">Thank you for your business. Remit electronic ACH payments to routing #021000021.</text>
+</svg>
