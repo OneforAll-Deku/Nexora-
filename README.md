@@ -2,14 +2,21 @@
   <img src="./logo.png" alt="Nexora Logo" width="130" height="130" />
   <h1>Nexora</h1>
   <p><strong>Enterprise Intelligent Invoice & Accounts Payable ERP (BYOK Edition)</strong></p>
+  <p>
+    <a href="https://nexora-ap.vercel.app"><strong>🌐 Launch Live Production App: https://nexora-ap.vercel.app</strong></a>
+  </p>
 </div>
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-nexora--ap.vercel.app-000000?style=flat-square&logo=vercel)](https://nexora-ap.vercel.app)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Nexora--181717?style=flat-square&logo=github)](https://github.com/OneforAll-Deku/Nexora-)
 [![Next.js 15](https://img.shields.io/badge/Frontend-Next.js%2015-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%200.115-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python)](https://python.org/)
 [![BYOK AI](https://img.shields.io/badge/AI%20Engine-Gemini%202.5%20%7C%20OpenRouter-6366F1?style=flat-square)](https://aistudio.google.com/)
 [![Zero-Cost](https://img.shields.io/badge/Hosting%20Cost-$0%2Fmo%20Zero--Egress-10B981?style=flat-square)](https://cloudflare.com/)
+
+> 🚀 **Live Production URL**: [https://nexora-ap.vercel.app](https://nexora-ap.vercel.app)  
+> 🔗 **Alternative Mirrors**: [https://nexora-invoices.vercel.app](https://nexora-invoices.vercel.app) • [https://nexora-ai-erp.vercel.app](https://nexora-ai-erp.vercel.app)
 
 An enterprise-grade, zero-cost-to-host accounts payable and document intelligence platform. Powered by **Bring-Your-Own-Key (BYOK) Google Gemini AI** and **OpenRouter open-source models**, statistical $Z$-score unit-price surge auditing, duplicate invoice detection, arithmetic sanity checks, an interactive split-screen reconciliation workspace, and multi-tab Excel/CSV/PDF remittance export engines.
 
