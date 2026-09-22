@@ -10,8 +10,10 @@ import {
   ShieldAlert, 
   KeyRound, 
   Layers,
-  ShieldCheck
+  ShieldCheck,
+  ExternalLink
 } from 'lucide-react';
+import { GithubIcon } from '@/components/ui/GithubIcon';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
@@ -70,14 +72,29 @@ export function Sidebar() {
         </nav>
       </div>
 
-      <div className="p-4 border border-border m-4 rounded-2xl bg-secondary/50">
-        <div className="flex items-center gap-2 mb-1.5">
-          <ShieldCheck className="w-4 h-4 text-accent" />
-          <span className="text-xs font-semibold text-foreground font-display">Zero-Cost Architecture</span>
+      <div className="p-4 border border-border m-4 rounded-2xl bg-secondary/50 space-y-2.5">
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+            <ShieldCheck className="w-4 h-4 text-accent" />
+            <span className="text-xs font-semibold text-foreground font-display">Zero-Cost Architecture</span>
+          </div>
+          <p className="text-[11px] text-muted-foreground leading-relaxed">
+            Powered by Gemini &amp; OpenRouter AI + Cloudflare R2 zero-egress. $0/mo hosting overhead.
+          </p>
         </div>
-        <p className="text-[11px] text-muted-foreground leading-relaxed">
-          Powered by Gemini &amp; OpenRouter AI + Cloudflare R2 zero-egress. $0/mo hosting overhead.
-        </p>
+
+        <a
+          href="https://github.com/OneforAll-Deku/Nexora-"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-between px-3 py-1.5 rounded-xl bg-background border border-border hover:bg-secondary text-xs text-foreground font-medium transition-all hover:border-accent/40 group shadow-sm"
+        >
+          <div className="flex items-center gap-2">
+            <GithubIcon className="w-3.5 h-3.5 text-foreground group-hover:scale-110 transition-transform" />
+            <span className="text-[11px]">Open Source</span>
+          </div>
+          <ExternalLink className="w-3 h-3 text-muted-foreground" />
+        </a>
       </div>
     </aside>
   );

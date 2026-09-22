@@ -51,6 +51,7 @@ import {
   Database
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { GithubIcon } from '@/components/ui/GithubIcon';
 
 export default function SaaSLandingPage() {
   const [activeModal, setActiveModal] = useState<'video' | 'demo' | 'pricing' | 'about' | 'contact' | null>(null);
@@ -61,6 +62,13 @@ export default function SaaSLandingPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [demoForm, setDemoForm] = useState({ name: '', email: '', company: '', volume: '50-200' });
   const [demoSubmitted, setDemoSubmitted] = useState(false);
+  const [copiedClone, setCopiedClone] = useState(false);
+
+  const handleCopyClone = () => {
+    navigator.clipboard.writeText('git clone https://github.com/OneforAll-Deku/Nexora-.git');
+    setCopiedClone(true);
+    setTimeout(() => setCopiedClone(false), 2000);
+  };
 
   const handleDemoSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -250,6 +258,12 @@ export default function SaaSLandingPage() {
             Capabilities
           </button>
           <button 
+            onClick={() => scrollToSection('how-it-works')} 
+            className="hover:text-foreground transition-colors cursor-pointer"
+          >
+            How to Use
+          </button>
+          <button 
             onClick={() => scrollToSection('calculator')} 
             className="hover:text-foreground transition-colors cursor-pointer"
           >
@@ -282,9 +296,21 @@ export default function SaaSLandingPage() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
+          <a
+            href="https://github.com/OneforAll-Deku/Nexora-"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-full border border-border bg-background/80 hover:bg-secondary text-foreground transition-all shadow-sm group hover:border-accent/40 cursor-pointer"
+            title="Star Nexora on GitHub"
+          >
+            <GithubIcon className="w-4 h-4 text-foreground group-hover:scale-110 transition-transform" />
+            <span className="hidden sm:inline">GitHub</span>
+            <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-accent/15 text-accent font-bold">★ OSS</span>
+          </a>
+
           <Link href="/staging">
-            <Button className="rounded-full px-5 py-2 text-xs font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm transition-transform active:scale-95 flex items-center gap-1.5">
+            <Button className="rounded-full px-4 py-2 text-xs font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm transition-transform active:scale-95 flex items-center gap-1.5">
               <span>Launch App</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Button>
@@ -295,6 +321,26 @@ export default function SaaSLandingPage() {
       <main className="relative z-10 flex flex-col items-center w-full px-4 pt-6 md:pt-10 shrink-0 pb-12">
         <div className="flex flex-col items-center w-full max-w-5xl">
           
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-3"
+          >
+            <a
+              href="https://github.com/OneforAll-Deku/Nexora-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-accent/10 hover:bg-accent/15 text-foreground text-xs font-medium backdrop-blur-md transition-all hover:scale-105 cursor-pointer shadow-sm group"
+            >
+              <GithubIcon className="w-4 h-4 text-foreground group-hover:rotate-12 transition-transform" />
+              <span className="font-semibold text-accent">100% Free &amp; Open Source</span>
+              <span className="text-muted-foreground">•</span>
+              <span className="text-muted-foreground group-hover:text-foreground transition-colors flex items-center gap-1">
+                Star on GitHub <ArrowRight className="w-3 h-3 text-accent group-hover:translate-x-0.5 transition-transform" />
+              </span>
+            </a>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
@@ -329,6 +375,16 @@ export default function SaaSLandingPage() {
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
+
+            <a
+              href="https://github.com/OneforAll-Deku/Nexora-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full px-6 py-5 text-sm font-medium font-body bg-background/80 border border-border hover:bg-secondary/60 text-foreground transition-all cursor-pointer flex items-center gap-2 shadow-sm group"
+            >
+              <GithubIcon className="w-4 h-4 text-foreground group-hover:scale-110 transition-transform" />
+              <span>GitHub Repo</span>
+            </a>
 
             <Button
               variant="outline"
@@ -1035,12 +1091,231 @@ export default function SaaSLandingPage() {
           </div>
         </div>
 
-        <div id="pipeline" className="max-w-5xl mx-auto space-y-8">
+        {/* 100% OPEN SOURCE & HOW TO USE SECTION */}
+        <div id="how-it-works" className="max-w-5xl mx-auto space-y-10 scroll-mt-24">
           <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-accent flex items-center justify-center gap-1.5">
-              <Layers className="w-3.5 h-3.5" />
-              <span>End-to-End Workflow</span>
-            </span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-accent/10 border border-accent/25 text-accent text-xs font-bold uppercase tracking-wider">
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>100% Open Source • Step-by-Step Guide</span>
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground font-bold">
+              How to Use Nexora &amp; Self-Host for Free
+            </h2>
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              No subscription barriers, zero vendor lock-in. Nexora is open-source under the MIT license with a Bring-Your-Own-Key (BYOK) architecture that leverages generous free-tier APIs.
+            </p>
+          </div>
+
+          {/* 3 Step Interactive Walkthrough */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="p-6 rounded-3xl bg-secondary/40 border border-border hover:border-accent/40 transition-all space-y-4 relative group">
+              <div className="flex items-center justify-between">
+                <div className="w-11 h-11 rounded-2xl bg-accent/15 text-accent flex items-center justify-center font-display text-xl font-bold">
+                  01
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
+                  BYOK Setup
+                </span>
+              </div>
+              <div className="space-y-1.5">
+                <h3 className="text-base font-bold text-foreground font-display">1. Connect Your Free Key</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Open the <strong>BYOK Vault</strong> and enter your Google AI Studio Gemini API key or OpenRouter key. Enjoy <strong>1,500 free daily multimodal requests</strong>. Keys are AES-Fernet encrypted client-side.
+                </p>
+              </div>
+              <div className="pt-2 flex items-center gap-2 text-xs text-accent font-medium">
+                <KeyRound className="w-3.5 h-3.5" />
+                <Link href="/settings" className="hover:underline flex items-center gap-1 font-semibold">
+                  <span>Open BYOK Vault</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-secondary/40 border border-border hover:border-teal-500/40 transition-all space-y-4 relative group">
+              <div className="flex items-center justify-between">
+                <div className="w-11 h-11 rounded-2xl bg-teal-500/15 text-teal-600 flex items-center justify-center font-display text-xl font-bold">
+                  02
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-600 border border-teal-500/20">
+                  Zero-Egress
+                </span>
+              </div>
+              <div className="space-y-1.5">
+                <h3 className="text-base font-bold text-foreground font-display">2. Drop Invoices &amp; Receipts</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Drag and drop single or multiple PDF documents, smartphone camera receipts, or distorted scans. Files stream to Cloudflare R2 with <strong>zero egress bandwidth fees</strong> and instant vision token extraction.
+                </p>
+              </div>
+              <div className="pt-2 flex items-center gap-2 text-xs text-teal-600 font-medium">
+                <UploadCloud className="w-3.5 h-3.5" />
+                <Link href="/staging" className="hover:underline flex items-center gap-1 font-semibold">
+                  <span>Ingestion Workspace</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-secondary/40 border border-border hover:border-purple-500/40 transition-all space-y-4 relative group">
+              <div className="flex items-center justify-between">
+                <div className="w-11 h-11 rounded-2xl bg-purple-500/15 text-purple-600 flex items-center justify-center font-display text-xl font-bold">
+                  03
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20">
+                  Audit &amp; Export
+                </span>
+              </div>
+              <div className="space-y-1.5">
+                <h3 className="text-base font-bold text-foreground font-display">3. Audit &amp; 1-Click Export</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Automated arithmetic checks verify every line item while statistical Z-scores flag price spikes. Once verified, export immediately to styled <strong>3-sheet Excel workbooks</strong>, CSV ledgers, and PDF vouchers.
+                </p>
+              </div>
+              <div className="pt-2 flex items-center gap-2 text-xs text-purple-600 font-medium">
+                <FileSpreadsheet className="w-3.5 h-3.5" />
+                <Link href="/ledger" className="hover:underline flex items-center gap-1 font-semibold">
+                  <span>General Ledger</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Open Source Hub Banner with GitHub Details */}
+          <div className="p-7 md:p-9 rounded-3xl bg-secondary/30 border border-border shadow-sm space-y-6">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 pb-6 border-b border-border">
+              <div className="flex items-start sm:items-center gap-4">
+                <div className="w-13 h-13 rounded-2xl bg-foreground text-background flex items-center justify-center shrink-0 shadow-md p-3">
+                  <GithubIcon className="w-7 h-7" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-xl font-bold text-foreground font-display">OneforAll-Deku/Nexora-</h3>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-700 font-bold border border-emerald-500/20">
+                      MIT License
+                    </span>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent font-bold border border-accent/20">
+                      100% Open Source
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Enterprise AP &amp; Document Intelligence ERP • Python FastAPI Core + Next.js 15
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://github.com/OneforAll-Deku/Nexora-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-full bg-foreground text-background hover:bg-foreground/90 text-xs font-semibold flex items-center gap-2 shadow-sm transition-all hover:scale-105 cursor-pointer"
+                >
+                  <GithubIcon className="w-4 h-4" />
+                  <span>Star on GitHub</span>
+                </a>
+                <a
+                  href="https://github.com/OneforAll-Deku/Nexora-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-full bg-background border border-border hover:bg-secondary text-foreground text-xs font-semibold flex items-center gap-2 shadow-sm transition-all hover:border-accent/40 cursor-pointer"
+                >
+                  <span>View Repository</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-muted-foreground" />
+                </a>
+              </div>
+            </div>
+
+            {/* Terminal Clone Block & Open Source Pillars */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-foreground flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span>Quickstart: Clone &amp; Run Locally</span>
+                  </span>
+                  <button
+                    onClick={handleCopyClone}
+                    className="text-[11px] px-2.5 py-1 rounded-lg bg-background border border-border hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 cursor-pointer"
+                  >
+                    {copiedClone ? (
+                      <>
+                        <Check className="w-3 h-3 text-emerald-600" />
+                        <span className="text-emerald-600 font-semibold">Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="font-mono">📋 Copy</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                <div className="bg-background rounded-2xl border border-border p-4 font-mono text-[11px] text-muted-foreground space-y-1.5 shadow-inner overflow-x-auto">
+                  <div className="flex items-center gap-2 text-[10px] text-muted-foreground/70 pb-1 border-b border-border/60">
+                    <span className="w-2 rounded-full h-2 bg-rose-500/70" />
+                    <span className="w-2 rounded-full h-2 bg-amber-500/70" />
+                    <span className="w-2 rounded-full h-2 bg-emerald-500/70" />
+                    <span className="ml-1 text-muted-foreground font-sans">bash / powershell</span>
+                  </div>
+                  <p className="text-foreground"><span className="text-accent select-none">$ </span>git clone https://github.com/OneforAll-Deku/Nexora-.git</p>
+                  <p className="text-foreground"><span className="text-accent select-none">$ </span>cd Nexora-</p>
+                  <p className="text-foreground"><span className="text-accent select-none">$ </span>pip install -r backend/requirements.txt</p>
+                  <p className="text-foreground"><span className="text-accent select-none">$ </span>npm --prefix frontend install &amp;&amp; npm --prefix frontend run dev</p>
+                </div>
+              </div>
+
+              <div className="space-y-2.5">
+                <span className="text-xs font-semibold text-foreground flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  <span>Why Open Source Accounts Payable Matters</span>
+                </span>
+
+                <div className="space-y-2.5 text-xs text-muted-foreground">
+                  <div className="p-3 rounded-xl bg-background border border-border space-y-1">
+                    <div className="font-semibold text-foreground flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Zero Vendor Markups</span>
+                    </div>
+                    <p className="text-[11px] leading-relaxed">
+                      Unlike commercial IDPs charging $500/seat and $0.40/page, you pay $0. Deploy on free Vercel, Supabase, and Cloudflare R2 tiers.
+                    </p>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-background border border-border space-y-1">
+                    <div className="font-semibold text-foreground flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Zero-Retention Financial Privacy</span>
+                    </div>
+                    <p className="text-[11px] leading-relaxed">
+                      Your vendor banking details, amounts, and tax IDs never train third-party models and are protected by AES-Fernet encrypted keys.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="pipeline" className="max-w-5xl mx-auto space-y-8 scroll-mt-24">
+          <div className="text-center space-y-2">
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-accent flex items-center justify-center gap-1.5">
+                <Layers className="w-3.5 h-3.5" />
+                <span>End-to-End Workflow</span>
+              </span>
+              <a
+                href="https://github.com/OneforAll-Deku/Nexora-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded-full bg-secondary border border-border text-muted-foreground hover:text-foreground transition-colors ml-2"
+                title="Inspect Pipeline on GitHub"
+              >
+                <GithubIcon className="w-3 h-3" />
+                <span>Source Code</span>
+                <ExternalLink className="w-2.5 h-2.5" />
+              </a>
+            </div>
             <h2 className="font-display text-3xl md:text-4xl text-foreground font-bold">
               The 4-Stage Autonomous Pipeline Explorer
             </h2>
@@ -1278,6 +1553,15 @@ export default function SaaSLandingPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
+            <a
+              href="https://github.com/OneforAll-Deku/Nexora-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground text-foreground transition-colors flex items-center gap-1.5 font-semibold"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>GitHub (OneforAll-Deku/Nexora-)</span>
+            </a>
             <Link href="/staging" className="hover:text-foreground transition-colors flex items-center gap-1">
               <UploadCloud className="w-3 h-3 text-accent" />
               <span>Batch Ingestion</span>

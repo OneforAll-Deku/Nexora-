@@ -8,6 +8,7 @@ import {
   Download, 
   Zap
 } from 'lucide-react';
+import { GithubIcon } from '@/components/ui/GithubIcon';
 import { apiClient } from '@/lib/api';
 import { GeminiKeyStatus } from '@/lib/types';
 import { ExportModal } from '../export/ExportModal';
@@ -37,6 +38,17 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3 md:gap-4">
+          <a
+            href="https://github.com/OneforAll-Deku/Nexora-"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-background hover:bg-secondary transition-all text-xs shadow-sm text-foreground hover:border-accent/40 group"
+            title="Nexora GitHub Repository"
+          >
+            <GithubIcon className="w-3.5 h-3.5 text-foreground group-hover:scale-110 transition-transform" />
+            <span className="hidden sm:inline font-medium">GitHub</span>
+          </a>
+
           <Link
             href="/settings"
             className="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-border bg-background hover:bg-secondary transition-all text-xs shadow-sm"
